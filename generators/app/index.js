@@ -9,7 +9,7 @@ var request = require('request');
 
 var gruntPackageMapping = {
   shell: 'grunt-shell',
-  bowermap: 'grunt-shell'
+  bowermap: 'grunt-bowermap'
 };
 
 module.exports = yeoman.generators.Base.extend({
