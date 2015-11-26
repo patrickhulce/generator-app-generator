@@ -3,6 +3,7 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 var fs = require('fs');
+var mkdirp = require('mkdirp');
 var YAML = require('js-yaml');
 var _ = require('lodash');
 var request = require('request');
@@ -101,7 +102,7 @@ module.exports = yeoman.generators.Base.extend({
         });
       };
 
-      fs.mkdir(self.templatePath('tmp/'), function () {
+      mkdirp(self.templatePath('tmp/'), function (err) {
         buildDirectory(self.appConfig.structure, '');
       });
     },
